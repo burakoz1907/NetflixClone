@@ -1,0 +1,53 @@
+.favoriteItem {
+  width: 300px; /* Genişliği artırın */
+}
+
+.favoritePoster {
+  width: 100%;
+  height: 450px; /* Yüksekliği artırın */
+  border-radius: 10px;
+}
+
+.favoriteDetails {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.favoritesContainer {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  flex-direction: column;
+}
+
+.carouselWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.carouselContainer {
+  display: flex;
+  justify-content: flex-start; /* Sola yaslamak için */
+  align-items: center;
+  width: 100%;
+}
+
+.keen-slider {
+  width: 100%;
+}
+.homeButton {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #e50914; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homeButton:hover {
+  background-color:#e50914; 
+}
+

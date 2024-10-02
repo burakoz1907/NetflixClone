@@ -1,0 +1,558 @@
+{
+  "films": {
+    "action": [
+      {
+        "id": 1,
+        "title": "Mad Max: Fury Road",
+        "description": "In a post-apocalyptic wasteland, Max teams up with a mysterious woman to fight a tyrannical leader.",
+        "image": "https://example.com/images/mad_max.jpg"
+      },
+      {
+        "id": 2,
+        "title": "John Wick",
+        "description": "An ex-hitman comes out of retirement to track down the gangsters that took everything from him.",
+        "image": "https://example.com/images/john_wick.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Die Hard",
+        "description": "New York City police officer John McClane fights a group of terrorists in a Los Angeles skyscraper.",
+        "image": "https://example.com/images/die_hard.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Gladiator",
+        "description": "A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.",
+        "image": "https://example.com/images/gladiator.jpg"
+      },
+      {
+        "id": 5,
+        "title": "The Dark Knight",
+        "description": "Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice when the Joker emerges.",
+        "image": "https://example.com/images/dark_knight.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Inception",
+        "description": "A thief who steals corporate secrets using dream-sharing technology is given the task of planting an idea into a CEO's mind.",
+        "image": "https://example.com/images/inception.jpg"
+      },
+      {
+        "id": 7,
+        "title": "The Avengers",
+        "description": "Earth's mightiest heroes must come together to stop Loki and his alien army from enslaving humanity.",
+        "image": "https://example.com/images/avengers.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Casino Royale",
+        "description": "James Bond's first mission as 007 leads him to a high-stakes poker game against a private banker funding terrorists.",
+        "image": "https://example.com/images/casino_royale.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Transformers",
+        "description": "An ancient struggle between two Cybertronian races, the heroic Autobots and the evil Decepticons, comes to Earth.",
+        "image": "https://example.com/images/transformers.jpg"
+      },
+      {
+        "id": 10,
+        "title": "The Matrix",
+        "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
+        "image": "https://example.com/images/matrix.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Mission: Impossible - Fallout",
+        "description": "Ethan Hunt and his IMF team join forces with some familiar allies to face off against a new threat.",
+        "image": "https://example.com/images/mission_impossible.jpg"
+      },
+      {
+        "id": 12,
+        "title": "Avatar",
+        "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "image": "https://example.com/images/avatar.jpg"
+      },
+      {
+        "id": 13,
+        "title": "Kingsman: The Secret Service",
+        "description": "A young street kid is recruited into a secret spy organization, where he must prove his worth to become a Kingsman agent.",
+        "image": "https://example.com/images/kingsman.jpg"
+      },
+      {
+        "id": 14,
+        "title": "Deadpool",
+        "description": "A former special forces operative turned mercenary is subjected to a rogue experiment that leaves him with accelerated healing powers.",
+        "image": "https://example.com/images/deadpool.jpg"
+      },
+      {
+        "id": 15,
+        "title": "Skyfall",
+        "description": "Bond's loyalty to M is tested as her past comes back to haunt her, bringing MI6 under attack.",
+        "image": "https://example.com/images/skyfall.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Pacific Rim",
+        "description": "As an alien threat emerges, humanity's last hope lies in a team of pilots who control giant robots.",
+        "image": "https://example.com/images/pacific_rim.jpg"
+      },
+      {
+        "id": 17,
+        "title": "300",
+        "description": "King Leonidas of Sparta leads 300 warriors against an invading Persian army.",
+        "image": "https://example.com/images/300.jpg"
+      },
+      {
+        "id": 18,
+        "title": "The Equalizer",
+        "description": "A retired black ops operative seeks vengeance against those who unjustly harmed a young girl.",
+        "image": "https://example.com/images/equalizer.jpg"
+      },
+      {
+        "id": 19,
+        "title": "RoboCop",
+        "description": "In a dystopic and crime-ridden Detroit, a terminally wounded cop returns to the force as a powerful cyborg with submerged memories.",
+        "image": "https://example.com/images/robocop.jpg"
+      },
+      {
+        "id": 20,
+        "title": "The Transporter",
+        "description": "A professional driver for hire is caught up in a world of crime when he takes on a job that requires him to transport a mysterious package.",
+        "image": "https://example.com/images/transporter.jpg"
+      }
+    ],
+    "drama": [
+      {
+        "id": 21,
+        "title": "The Shawshank Redemption",
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "image": "https://example.com/images/shawshank.jpg"
+      },
+      {
+        "id": 22,
+        "title": "Forrest Gump",
+        "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and other historical events unfold through the perspective of a man with an IQ of 75.",
+        "image": "https://example.com/images/forrest_gump.jpg"
+      },
+      {
+        "id": 23,
+        "title": "Fight Club",
+        "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much, much more.",
+        "image": "https://example.com/images/fight_club.jpg"
+      },
+      {
+        "id": 24,
+        "title": "The Godfather",
+        "description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+        "image": "https://example.com/images/godfather.jpg"
+      },
+      {
+        "id": 25,
+        "title": "Schindler's List",
+        "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution.",
+        "image": "https://example.com/images/schindlers_list.jpg"
+      },
+      {
+        "id": 26,
+        "title": "The Pursuit of Happyness",
+        "description": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+        "image": "https://example.com/images/pursuit_of_happyness.jpg"
+      },
+      {
+        "id": 27,
+        "title": "12 Years a Slave",
+        "description": "In the antebellum United States, Solomon Northup, a free black man, is abducted and sold into slavery.",
+        "image": "https://example.com/images/12_years_a_slave.jpg"
+      },
+      {
+        "id": 28,
+        "title": "The Social Network",
+        "description": "As Harvard students create the social networking site that would become Facebook, they must deal with both personal and legal ramifications.",
+        "image": "https://example.com/images/social_network.jpg"
+      },
+      {
+        "id": 29,
+        "title": "A Beautiful Mind",
+        "description": "The true story of John Nash, a brilliant but asocial mathematician, and his struggle with schizophrenia.",
+        "image": "https://example.com/images/beautiful_mind.jpg"
+      },
+      {
+        "id": 30,
+        "title": "The Green Mile",
+        "description": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal.",
+        "image": "https://example.com/images/green_mile.jpg"
+      },
+      {
+        "id": 31,
+        "title": "The Intouchables",
+        "description": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+        "image": "https://example.com/images/intouchables.jpg"
+      },
+      {
+        "id": 32,
+        "title": "Moonlight",
+        "description": "A young African-American man grapples with his identity and sexuality while experiencing the trials of childhood, adolescence, and adulthood.",
+        "image": "https://example.com/images/moonlight.jpg"
+      },
+      {
+        "id": 33,
+        "title": "The King's Speech",
+        "description": "The story of King George VI's effort to overcome his speech impediment with the help of an unorthodox speech therapist.",
+        "image": "https://example.com/images/kings_speech.jpg"
+      },
+      {
+        "id": 34,
+        "title": "Her",
+        "description": "In a future where technology is ever-evolving, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+        "image": "https://example.com/images/her.jpg"
+      },
+      {
+        "id": 35,
+        "title": "The Revenant",
+        "description": "A frontiersman on a quest for revenge against those who left him for dead must navigate a brutal wilderness.",
+        "image": "https://example.com/images/revenant.jpg"
+      },
+      {
+        "id": 36,
+        "title": "The Help",
+        "description": "In 1960s Mississippi, three women form an unlikely friendship around a secret writing project that could change their lives and the lives of generations to come.",
+        "image": "https://example.com/images/help.jpg"
+      },
+      {
+        "id": 37,
+        "title": "Good Will Hunting",
+        "description": "Will Hunting, a janitor at MIT, has a gift for mathematics but needs help from a psychologist to find direction in his life.",
+        "image": "https://example.com/images/good_will_hunting.jpg"
+      },
+      {
+        "id": 38,
+        "title": "Boyhood",
+        "description": "The life of a young boy, Mason, is captured over 12 years, from childhood to adulthood.",
+        "image": "https://example.com/images/boyhood.jpg"
+      },
+      {
+        "id": 39,
+        "title": "The Fault in Our Stars",
+        "description": "Two teenagers with cancer fall in love and must deal with their illness together.",
+        "image": "https://example.com/images/fault_in_our_stars.jpg"
+      },
+      {
+        "id": 40,
+        "title": "Spotlight",
+        "description": "The true story of how a team of Boston Globe reporters uncovered a massive scandal of child molestation and cover-up within the local Catholic Archdiocese.",
+        "image": "https://example.com/images/spotlight.jpg"
+      }
+    ],
+    "comedy": [
+      {
+        "id": 41,
+        "title": "Superbad",
+        "description": "Two high school friends try to make the most of their last days before graduation and end up in a wild adventure.",
+        "image": "https://example.com/images/superbad.jpg"
+      },
+      {
+        "id": 42,
+        "title": "Groundhog Day",
+        "description": "A cynical weatherman finds himself reliving the same day over and over again.",
+        "image": "https://example.com/images/groundhog_day.jpg"
+      },
+      {
+        "id": 43,
+        "title": "The Hangover",
+        "description": "Three friends wake up from a bachelor party in Las Vegas, with no memory of the previous night and the groom missing.",
+        "image": "https://example.com/images/hangover.jpg"
+      },
+      {
+        "id": 44,
+        "title": "Bridesmaids",
+        "description": "A competition between the maid of honor and a bridesmaid to prove who is the best friend of the bride.",
+        "image": "https://example.com/images/bridesmaids.jpg"
+      },
+      {
+        "id": 45,
+        "title": "Mean Girls",
+        "description": "A new student at a high school is targeted by the queen bee of the popular girls and learns the rules of the social hierarchy.",
+        "image": "https://example.com/images/mean_girls.jpg"
+      },
+      {
+        "id": 46,
+        "title": "Step Brothers",
+        "description": "Two aimless middle-aged losers become roommates when their parents marry each other.",
+        "image": "https://example.com/images/step_brothers.jpg"
+      },
+      {
+        "id": 47,
+        "title": "21 Jump Street",
+        "description": "Two underachieving cops are sent back to high school to blend in and bring down a synthetic drug ring.",
+        "image": "https://example.com/images/21_jump_street.jpg"
+      },
+      {
+        "id": 48,
+        "title": "The 40-Year-Old Virgin",
+        "description": "A middle-aged man's friends try to help him lose his virginity.",
+        "image": "https://example.com/images/40_year_old_virgin.jpg"
+      },
+      {
+        "id": 49,
+        "title": "The Other Guys",
+        "description": "Two mismatched New York City detectives seize an opportunity to step up like the city's top cops whom they idolize.",
+        "image": "https://example.com/images/other_guys.jpg"
+      },
+      {
+        "id": 50,
+        "title": "Zombieland",
+        "description": "A shy student trying to reach his family in Ohio, while the zombie apocalypse is in full effect.",
+        "image": "https://example.com/images/zombieland.jpg"
+      }
+    ],
+    "thriller": [
+      {
+        "id": 51,
+        "title": "Se7en",
+        "description": "Two detectives hunt a serial killer who uses the seven deadly sins as his modus operandi.",
+        "image": "https://example.com/images/seven.jpg"
+      },
+      {
+        "id": 52,
+        "title": "Gone Girl",
+        "description": "A man becomes the prime suspect in the disappearance of his wife.",
+        "image": "https://example.com/images/gone_girl.jpg"
+      },
+      {
+        "id": 53,
+        "title": "Prisoners",
+        "description": "When two girls go missing, a desperate father takes matters into his own hands as the police pursue multiple leads.",
+        "image": "https://example.com/images/prisoners.jpg"
+      },
+      {
+        "id": 54,
+        "title": "Shutter Island",
+        "description": "A U.S. Marshal investigates the disappearance of a murderer who escaped from a mental institution.",
+        "image": "https://example.com/images/shutter_island.jpg"
+      },
+      {
+        "id": 55,
+        "title": "The Girl with the Dragon Tattoo",
+        "description": "A journalist and a hacker team up to solve the mystery of a woman who disappeared 40 years ago.",
+        "image": "https://example.com/images/girl_with_dragon_tattoo.jpg"
+      },
+      {
+        "id": 56,
+        "title": "Black Swan",
+        "description": "A ballet dancer's obsession with perfection leads her down a dark path.",
+        "image": "https://example.com/images/black_swan.jpg"
+      },
+      {
+        "id": 57,
+        "title": "The Silence of the Lambs",
+        "description": "A young FBI cadet must receive the help of an incarcerated and manipulative killer to catch another serial killer.",
+        "image": "https://example.com/images/silence_of_the_lambs.jpg"
+      },
+      {
+        "id": 58,
+        "title": "Memento",
+        "description": "A man with short-term memory loss attempts to track down his wife's murderer.",
+        "image": "https://example.com/images/memento.jpg"
+      },
+      {
+        "id": 59,
+        "title": "The Sixth Sense",
+        "description": "A young boy who communicates with spirits seeks the help of a disheartened child psychologist.",
+        "image": "https://example.com/images/sixth_sense.jpg"
+      },
+      {
+        "id": 60,
+        "title": "Oldboy",
+        "description": "After being imprisoned for 15 years, a man is released and must find his captor in five days.",
+        "image": "https://example.com/images/oldboy.jpg"
+      }
+    ],
+    "sciFi": [
+      {
+        "id": 61,
+        "title": "Interstellar",
+        "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "image": "https://example.com/images/interstellar.jpg"
+      },
+      {
+        "id": 62,
+        "title": "Blade Runner 2049",
+        "description": "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard.",
+        "image": "https://example.com/images/blade_runner.jpg"
+      },
+      {
+        "id": 63,
+        "title": "Arrival",
+        "description": "A linguist is recruited by the military to communicate with alien lifeforms after a series of worldwide alien spacecraft land.",
+        "image": "https://example.com/images/arrival.jpg"
+      },
+      {
+        "id": 64,
+        "title": "The Fifth Element",
+        "description": "In the 23rd century, a cab driver becomes a central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.",
+        "image": "https://example.com/images/fifth_element.jpg"
+      },
+      {
+        "id": 65,
+        "title": "District 9",
+        "description": "An extraterrestrial race forced to live in slum-like conditions on Earth suddenly finds a kindred spirit in a government agent.",
+        "image": "https://example.com/images/district_9.jpg"
+      },
+      {
+        "id": 66,
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "description": "After a painful breakup, a couple undergoes a procedure to erase each other from their memories.",
+        "image": "https://example.com/images/eternal_sunshine.jpg"
+      },
+      {
+        "id": 67,
+        "title": "Gravity",
+        "description": "Two astronauts work together to survive after an accident leaves them stranded in space.",
+        "image": "https://example.com/images/gravity.jpg"
+      },
+      {
+        "id": 68,
+        "title": "Ex Machina",
+        "description": "A young programmer is selected to participate in a groundbreaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced A.I.",
+        "image": "https://example.com/images/ex_machina.jpg"
+      },
+      {
+        "id": 69,
+        "title": "Ready Player One",
+        "description": "In a dystopian future, a teenager finds himself in a virtual reality world where he must compete to find an Easter egg.",
+        "image": "https://example.com/images/ready_player_one.jpg"
+      },
+      {
+        "id": 70,
+        "title": "Children of Men",
+        "description": "In a world where humans can no longer reproduce, a disillusioned bureaucrat becomes an unlikely champion in the fight for humanity's survival.",
+        "image": "https://example.com/images/children_of_men.jpg"
+      }
+    ],
+    "romance": [
+      {
+        "id": 71,
+        "title": "The Notebook",
+        "description": "A poor young man and a rich young woman fall in love during the summer of 1940.",
+        "image": "https://example.com/images/notebook.jpg"
+      },
+      {
+        "id": 72,
+        "title": "Pride and Prejudice",
+        "description": "In 19th century England, a spirited young woman faces obstacles to find true love.",
+        "image": "https://example.com/images/pride_and_prejudice.jpg"
+      },
+      {
+        "id": 73,
+        "title": "La La Land",
+        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles.",
+        "image": "https://example.com/images/la_la_land.jpg"
+      },
+      {
+        "id": 74,
+        "title": "Titanic",
+        "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+        "image": "https://example.com/images/titanic.jpg"
+      },
+      {
+        "id": 75,
+        "title": "Silver Linings Playbook",
+        "description": "After a stint in a mental institution, former teacher Pat Solitano tries to rebuild his life and forms a bond with a mysterious girl.",
+        "image": "https://example.com/images/silver_linings_playbook.jpg"
+      },
+      {
+        "id": 76,
+        "title": "10 Things I Hate About You",
+        "description": "A new student is required to find a guy to date a headstrong girl to get close to her younger sister.",
+        "image": "https://example.com/images/10_things_i_hate_about_you.jpg"
+      },
+      {
+        "id": 77,
+        "title": "When Harry Met Sally...",
+        "description": "Harry and Sally's friendship is tested when they begin to question if men and women can be friends without romantic involvement.",
+        "image": "https://example.com/images/when_harry_met_sally.jpg"
+      },
+      {
+        "id": 78,
+        "title": "Crazy, Stupid, Love.",
+        "description": "When his marriage comes to an end, a man seeks help from a bachelor to regain his confidence.",
+        "image": "https://example.com/images/crazy_stupid_love.jpg"
+      },
+      {
+        "id": 79,
+        "title": "Notting Hill",
+        "description": "A London bookseller falls for a high-profile American actress.",
+        "image": "https://example.com/images/notting_hill.jpg"
+      },
+      {
+        "id": 80,
+        "title": "A Walk to Remember",
+        "description": "A rebellious young man is thrown together with a quiet preacher's daughter, and they discover a bond that leads to an unexpected romance.",
+        "image": "https://example.com/images/walk_to_remember.jpg"
+      }
+    ],
+    "horror": [
+      {
+        "id": 81,
+        "title": "Get Out",
+        "description": "A young African-American man uncovers a disturbing secret when he meets his white girlfriend's family.",
+        "image": "https://example.com/images/get_out.jpg"
+      },
+      {
+        "id": 82,
+        "title": "The Conjuring",
+        "description": "Paranormal investigators help a family terrorized by a dark presence in their farmhouse.",
+        "image": "https://example.com/images/conjuring.jpg"
+      },
+      {
+        "id": 83,
+        "title": "A Nightmare on Elm Street",
+        "description": "Teenagers in a small town are terrorized by Freddy Krueger, a disfigured man who haunts dreams.",
+        "image": "https://example.com/images/nightmare_on_elm_street.jpg"
+      },
+      {
+        "id": 84,
+        "title": "Hereditary",
+        "description": "A grieving family is haunted after the death of their secretive grandmother.",
+        "image": "https://example.com/images/hereditary.jpg"
+      },
+      {
+        "id": 85,
+        "title": "It",
+        "description": "A group of bullied kids band together when a shapeshifting demon, taking the appearance of clown, begins hunting children.",
+        "image": "https://example.com/images/it.jpg"
+      },
+      {
+        "id": 86,
+        "title": "The Babadook",
+        "description": "A widowed mother and her son confront their fears when a sinister presence invades their home.",
+        "image": "https://example.com/images/babadook.jpg"
+      },
+      {
+        "id": 87,
+        "title": "The Ring",
+        "description": "A reporter investigates a mysterious videotape that seems to cause the death of its viewers exactly seven days after they watch it.",
+        "image": "https://example.com/images/ring.jpg"
+      },
+      {
+        "id": 88,
+        "title": "Saw",
+        "description": "Two strangers awaken in a room with no recollection of how they got there and must survive a deadly game.",
+        "image": "https://example.com/images/saw.jpg"
+      },
+      {
+        "id": 89,
+        "title": "Paranormal Activity",
+        "description": "After moving into a suburban home, a couple becomes increasingly disturbed by a nightly demonic presence.",
+        "image": "https://example.com/images/paranormal_activity.jpg"
+      },
+      {
+        "id": 90,
+        "title": "The Witch",
+        "description": "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
+        "image": "https://example.com/images/witch.jpg"
+      }
+    ]
+  }
+}

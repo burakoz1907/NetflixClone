@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/arkaplan.png'); */
+  }
+  
+  .homepage-container {
+    position: relative;
+    height: 885px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/arkaplan.png');
+
+
+  }
+  
+  .background-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem; 
+    margin-bottom: 30px;
+  }
+  
+  .email-input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e50914; 
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .input-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 10px; 
+    gap: 10px;
+  }
+  
+  
+
+
+

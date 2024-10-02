@@ -1,0 +1,14 @@
+body{
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+    
+}
+
+.containerMovie{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 20px;
+    margin-top: 80px;
+
+}
