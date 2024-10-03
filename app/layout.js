@@ -1,9 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, RedirectToSignIn } from "@clerk/nextjs"; // RedirectToSignIn'ı ekleyebilirsin
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonAppBar from "./components/navbar/navbar";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,16 +22,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ButtonAppBar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} // Publishable Key'i buraya ekle
+      // Eğer gerekli ise secretKey de eklenebilir
+    >
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <ButtonAppBar />
+          {children}
+        </body>
+      </html>
     </ClerkProvider>
-
   );
 }
