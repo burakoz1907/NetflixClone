@@ -5,7 +5,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
-import styles from './carousel.module.css'; // CSS dosyasını import edin
+import styles from './carousel.module.css'; 
 
 const Carousel = ({ movies = [] }) => {
   const [sliderRef, sliderInstanceRef] = useKeenSlider({

@@ -11,10 +11,19 @@ const FavoritesCarousel = ({ movies = [] }) => {
     loop: true,
     mode: "free",
     slides: {
-      perView: 4,
+      perView: 4, // Varsayılan olarak 4 resim gösterilecek
       spacing: 15,
     },
+    breakpoints: {
+      "(max-width: 768px)": { // Tabletler ve daha küçük cihazlar için
+        slides: { perView: 2, spacing: 10 }, // 2 resim göster
+      },
+      "(max-width: 480px)": { // Telefonlar için
+        slides: { perView: 1, spacing: 5 }, // 1 resim göster
+      },
+    },
   });
+
   const router = useRouter();
 
   const handleMovieClick = (movieId) => {
