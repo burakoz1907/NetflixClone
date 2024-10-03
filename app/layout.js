@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkProvider, RedirectToSignIn } from "@clerk/nextjs"; // RedirectToSignIn'ı ekleyebilirsin
+import { ClerkProvider } from "@clerk/nextjs";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonAppBar from "./components/navbar/navbar";
 
@@ -23,8 +23,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} // Publishable Key'i buraya ekle
-      // Eğer gerekli ise secretKey de eklenebilir
+      frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API} // Frontend API
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_API_KEY} // Publishable Key
     >
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
