@@ -1,0 +1,23 @@
+.keen-slider {
+    width: 100%;
+  }
+  
+  .keen-slider__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    /* Tablet ve daha küçük cihazlar için */
+    .keen-slider__slide {
+      width: 50%; /* Tabletlerde her slaytın genişliği */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Mobil cihazlar için */
+    .keen-slider__slide {
+      width: 100%; /* Mobil cihazlarda her slaytın genişliği */
+    }
+  }
