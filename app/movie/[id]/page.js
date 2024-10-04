@@ -1,128 +1,129 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { supabase } from "@/app/supabaseClient"; 
 import { useAuth } from '@clerk/nextjs'; 
-import styles from "./card.module.css";
+import { supabase } from "@/app/supabaseClient"; 
+import styles from "./card.module.css"; 
 import StarRating from "@/app/components/star"; 
 
 const MoviePage = ({ params }) => {
   const { id } = params;
   const { userId } = useAuth(); 
   const [movie, setMovie] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); 
   const [isFavorite, setIsFavorite] = useState(false);
   const [rating, setRating] = useState(() => {
-  const savedRating = localStorage.getItem(`rating_${id}`);
-  return savedRating ? Number(savedRating) : null; // Kaydedilmiş puan varsa, onu yükle
+    // Locadeki verilere göre null dönmesi için
+    const savedRating = localStorage.getItem(`rating_${id}`);
+    return savedRating ? Number(savedRating) : null; 
   });
 
+  // Film için detaylar
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const apiKey = '87eb117002b0f10ae6dfdfae4e452326';
-        const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
+        const apiKey = '87eb117002b0f10ae6dfdfae4e452326'; 
+        const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`; 
         const response = await fetch(url);
-        const data = await response.json();
-        setMovie(data);
+        const data = await response.json(); 
+        setMovie(data); 
       } catch (error) {
         console.error('Error fetching movie data:', error);
       } finally {
-        setLoading(false);
+        setLoading(false); 
       }
     };
 
-    fetchMovieDetails();
-  }, [id]);
+    fetchMovieDetails(); 
+  }, [id]); 
 
   useEffect(() => {
     const checkIfFavorite = async () => {
-      if (!userId) return;
+      if (!userId) return; 
 
       const { data, error } = await supabase
-        .from('favorites')
+        .from('favorites') 
         .select('*')
-        .eq('user_id', userId)
-        .eq('movie_id', id);
+        .eq('user_id', userId) 
+        .eq('movie_id', id); 
 
       if (error) {
-        console.error('Error checking favorite status:', error);
+        console.error('Error checking favorite status:', error); 
       } else if (data.length > 0) {
-        setIsFavorite(true);
+        setIsFavorite(true); 
       }
     };
 
-    checkIfFavorite();
-  }, [id, userId]);
+    checkIfFavorite(); 
+  }, [id, userId]); 
 
+  // Favoriler tablosuna ekleme
   const handleAddToFavorites = async () => {
     try {
       if (!userId || isFavorite) {
-        return; // Kullanıcı giriş yapmamışsa veya zaten favoriyse, hiçbir şey yapma
+        return; 
       }
 
-      const { data, error } = await supabase
-        .from('favorites')
+      const { error } = await supabase
+        .from('favorites') 
         .insert([{
-          user_id: userId,
-          movie_id: id,
-          title: movie.title,
-          poster_path: movie.poster_path,
+          user_id: userId, 
+          movie_id: id, 
+          title: movie.title, 
+          poster_path: movie.poster_path, 
         }]);
 
       if (error) {
-        console.error('Error adding to favorites:', error);
+        console.error('Error adding to favorites:', error); 
       } else {
-        setIsFavorite(true);
+        setIsFavorite(true); 
       }
     } catch (error) {
-      console.error('Error adding to favorites:', error);
+      console.error('Error adding to favorites:', error); 
     }
   };
 
+  // yıldız puanı değişirse guncelleme
   const handleRatingChange = (newRating) => {
-    setRating(newRating);
-    // Puanı localStorage'a kaydet
+    setRating(newRating); 
     localStorage.setItem(`rating_${id}`, newRating);
   };
 
-  if (loading) return <div>Loading...</div>;
-
+  if (loading) return <div>Loading...</div>; 
   if (!movie) return <div>Film bulunamadı.</div>;
 
   return (
     <div className={styles.card}>
       {movie.poster_path ? (
         <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
+          alt={movie.title} 
           className={styles.poster}
         />
       ) : (
-        <p>Poster mevcut değil</p>
+        <p>Poster mevcut değil</p> 
       )}
       <div className={styles.details}>
-        <h1 className={styles.title}>{movie.title}</h1>
-        <p className={styles.overview}>{movie.overview}</p>
-        <p><strong>Çıkış Tarihi:</strong> {movie.release_date}</p>
+        <h1 className={styles.title}>{movie.title}</h1> 
+        <p className={styles.overview}>{movie.overview}</p> 
+        <p><strong>Çıkış Tarihi:</strong> {movie.release_date}</p> 
         <p><strong>Değerlendirme:</strong> {movie.vote_average} / 10</p>
-        <p><strong>Süre:</strong> {movie.runtime} dakika</p>
+        <p><strong>Süre:</strong> {movie.runtime} dakika</p> 
         {movie.genres && movie.genres.length > 0 && (
           <p>
-            <strong>Türler:</strong> {movie.genres.map(genre => genre.name).join(', ')}
+            <strong>Türler:</strong> {movie.genres.map(genre => genre.name).join(', ')} 
           </p>
         )}
 
         <div className={styles.favoriteContainer}>
           <button
-            onClick={handleAddToFavorites}
-            disabled={isFavorite}
+            onClick={handleAddToFavorites} 
+            disabled={isFavorite} 
             className={styles.favoriteButton}
           >
-            {isFavorite ? 'Favorilere Eklendi' : 'Favorilere Ekle'}
+            {isFavorite ? 'Favorilere Eklendi' : 'Favorilere Ekle'} 
           </button>
-          <StarRating rating={rating} onRatingChange={handleRatingChange} />
+          <StarRating rating={rating} onRatingChange={handleRatingChange} /> 
         </div>
       </div>
     </div>
