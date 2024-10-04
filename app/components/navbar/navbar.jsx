@@ -37,7 +37,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Image src="/Frame.png" alt="logo" width="100" height="100" />
           </Typography>
-
+          <h3>BU BİR CLONEDUR</h3>
           <SignedOut>
             <Link href="/sign-up">
               <Button sx={{ backgroundColor: "#E50914", color: "white", borderRadius: "5px", margin: "5px" }}>
