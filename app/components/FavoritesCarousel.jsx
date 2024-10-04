@@ -4,22 +4,22 @@ import React, { useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useRouter } from "next/navigation";
-import styles from '../favorites/favorites.module.css'; // CSS dosyasını doğru yoldan import edin
+import styles from '../favorites/favorites.module.css'; 
 
 const FavoritesCarousel = ({ movies = [] }) => {
   const [sliderRef, sliderInstanceRef] = useKeenSlider({
     loop: true,
     mode: "free",
     slides: {
-      perView: 4, // Varsayılan olarak 4 resim gösterilecek
+      perView: 4, 
       spacing: 15,
     },
     breakpoints: {
-      "(max-width: 768px)": { // Tabletler ve daha küçük cihazlar için
-        slides: { perView: 2, spacing: 10 }, // 2 resim göster
+      "(max-width: 768px)": { 
+        slides: { perView: 2, spacing: 10 },
       },
-      "(max-width: 480px)": { // Telefonlar için
-        slides: { perView: 1, spacing: 5 }, // 1 resim göster
+      "(max-width: 480px)": { 
+        slides: { perView: 1, spacing: 5 }, 
       },
     },
   });

@@ -2,18 +2,21 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/app/supabaseClient"; // Supabase bağlantısı
-import { useAuth } from '@clerk/nextjs'; // Clerk kullanarak auth
-
+import { supabase } from "@/app/supabaseClient"; 
+import { useAuth } from '@clerk/nextjs'; 
 import styles from "./card.module.css";
-import Radio from "@/app/components/star";
+import StarRating from "@/app/components/star"; 
 
 const MoviePage = ({ params }) => {
   const { id } = params;
-  const { userId } = useAuth(); // Clerk kimlik doğrulaması
+  const { userId } = useAuth(); 
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [isFavorite, setIsFavorite] = useState(false); // Favori olup olmadığını kontrol et
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [rating, setRating] = useState(() => {
+  const savedRating = localStorage.getItem(`rating_${id}`);
+  return savedRating ? Number(savedRating) : null; // Kaydedilmiş puan varsa, onu yükle
+  });
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -61,14 +64,12 @@ const MoviePage = ({ params }) => {
 
       const { data, error } = await supabase
         .from('favorites')
-        .insert([
-          {
-            user_id: userId,
-            movie_id: id,
-            title: movie.title,
-            poster_path: movie.poster_path,
-          }
-        ]);
+        .insert([{
+          user_id: userId,
+          movie_id: id,
+          title: movie.title,
+          poster_path: movie.poster_path,
+        }]);
 
       if (error) {
         console.error('Error adding to favorites:', error);
@@ -78,6 +79,12 @@ const MoviePage = ({ params }) => {
     } catch (error) {
       console.error('Error adding to favorites:', error);
     }
+  };
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+    // Puanı localStorage'a kaydet
+    localStorage.setItem(`rating_${id}`, newRating);
   };
 
   if (loading) return <div>Loading...</div>;
@@ -107,17 +114,16 @@ const MoviePage = ({ params }) => {
           </p>
         )}
 
-       {/* Favori Ekle Butonu */}
-<div className={styles.favoriteContainer}>
-  <button
-    onClick={handleAddToFavorites}
-    disabled={isFavorite} // Eğer zaten favoriyse butonu devre dışı bırak
-    className={styles.favoriteButton}
-  >
-    {isFavorite ? 'Favorilere Eklendi' : 'Favorilere Ekle'}
-  </button>
-  <Radio />
-</div>
+        <div className={styles.favoriteContainer}>
+          <button
+            onClick={handleAddToFavorites}
+            disabled={isFavorite}
+            className={styles.favoriteButton}
+          >
+            {isFavorite ? 'Favorilere Eklendi' : 'Favorilere Ekle'}
+          </button>
+          <StarRating rating={rating} onRatingChange={handleRatingChange} />
+        </div>
       </div>
     </div>
   );

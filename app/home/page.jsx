@@ -5,6 +5,7 @@ import Carousel from '../components/carousel';
 import { useRouter } from "next/navigation";
 import { useAuth } from '@clerk/nextjs';
 import './home.css';
+import Footer from '../components/footer/footer';
 
 export default function Page() {
   const { isSignedIn } = useAuth(); 
@@ -148,6 +149,7 @@ export default function Page() {
   // veri çekme işlemi bitti
 
   return (
+  
     <div className='containerMovie'> 
       <h3>Sıradaki Önerimiz</h3>
       <Carousel movies={popularMovies}/>
@@ -169,6 +171,8 @@ export default function Page() {
 
       <h3>Aksiyon ve Macera</h3>
       <Carousel movies={actionMovies}/>
+      <Footer />
     </div>
+
   );
 }
